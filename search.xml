@@ -20,11 +20,11 @@
       
         <tags>
             
+            <tag> Chinese Segmentation </tag>
+            
             <tag> NLP </tag>
             
             <tag> Sentiment Analysis </tag>
-            
-            <tag> Chinese Segmentation </tag>
             
         </tags>
       
@@ -49,9 +49,9 @@
       
         <tags>
             
-            <tag> Chinese Segmentation </tag>
-            
             <tag> Zipf </tag>
+            
+            <tag> Chinese Segmentation </tag>
             
             <tag> Feature extraction </tag>
             
