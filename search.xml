@@ -4,9 +4,38 @@
   
     
     <entry>
+      <title>How Does Chinese Segmentation Strategy Effect on Sentiment Analysis of Short Text?</title>
+      <link href="/2021/08/26/chinese-seg/"/>
+      <url>/2021/08/26/chinese-seg/</url>
+      
+        <content type="html"><![CDATA[<p>In term of Chinese natural language processing, it exits one particular problem that how to choose the strategy of word segmentation, which commonly includes char-based and word-based. Targeted at sentiment analysis of short text comparing with long text, the word-based segmentation faces the other problem that there are the more ambiguous or unregistered words in context of short text. The feature extraction done by the different Chinese Word Segmentation impact the statistic distribution of features, and further the accuracy of sentiment analysis. This paper evaluates five Chinese segmentation strategy effect on Sentiment Analysis of Short Text.  We chose two word-based Chinese Word Segmentation (CWS), and three char-based n-gram, then transformed Bag-of-Word (BOW) to Vector Space Model (VSM) which finally was fed into several classifiers to predict sentiment polarity of short text. To reduce the impact of corpora, the study is based a collection of five public corpora.</p><p><img src="images/chinese-seg.png" alt="cover"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> papers </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NLP </tag>
+            
+            <tag> Sentiment Analysis </tag>
+            
+            <tag> Chinese Segmentation </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Leveraging Zipf’s Law to Analyze Statistical Distribution of Chinese Corpus</title>
-      <link href="/2021/07/12/first-post/"/>
-      <url>/2021/07/12/first-post/</url>
+      <link href="/2021/07/12/leveraging-Zipf/"/>
+      <url>/2021/07/12/leveraging-Zipf/</url>
       
         <content type="html"><![CDATA[<p><img src="images/zipf.png" alt="cover"></p><p>In  term of  Chinese  natural  language  processing,  it exits  one  particular  problem  that  how  to  choose  the  strategy  of word  segmentation,  which  commonly  includes  char-based  and word-based.   Targeted   at   sentiment   analysis   of   short   text comparing with long text, the word-based segmentation faces the other problem that there are the more ambiguous or unregistered words in context of short text. The feature extraction done by the different   Chinese   Word   Segmentation   impact   the   statistic distribution  of  features,  and  further the  accuracy  of  sentiment analysis. This paper evaluates five Chinese segmentation strategy effect on Sentiment Analysis of Short Text.  We chose two word-based Chinese Word Segmentation (CWS), and three char-based n-gram and made usage of Zipf’s law to quantify and present the result of word segmentation.</p>]]></content>
       
@@ -20,9 +49,9 @@
       
         <tags>
             
-            <tag> Zipf </tag>
-            
             <tag> Chinese Segmentation </tag>
+            
+            <tag> Zipf </tag>
             
             <tag> Feature extraction </tag>
             
