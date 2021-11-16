@@ -87,6 +87,35 @@
     </entry>
     
     
+    
+    <entry>
+      <title>Performance and Scalability Testing Strategy Based on Kubemark</title>
+      <link href="/2019/04/01/kubemark/"/>
+      <url>/2019/04/01/kubemark/</url>
+      
+        <content type="html"><![CDATA[<p><img src="images/kubemark.png" alt="cover"></p><p>The technology of container orchestration dramatically speeds up the extension of applications architected on microservices. As the complexity of those applications continues to increase, the orchestration system needs to resolve performance challenge to deploy thousands of coexisting applications to work cooperatively, and to reach the requirements of efficiency and scalability of microservices architectures. The Kubernetes is an open source project to implement container orchestration, and more popular than the others. For performance testing, the Kubernetes provides Kubemark as a deployment tool, which can simulate a large- scale Kubenetes clusters. Kubemark supports the performance evaluation of cluster scale much larger than the real cluster scale. This paper addresses performance issues of microservices structure, describes the architecture of Kubernetes to implement schedule of resource, and finally proposes a method of performance testing with Kubemark.</p><p>2019 IEEE 4th International Conference on Cloud Computing and Big Data Analysis (ICCCBDA)<br>DOI: 10.1109/ICCCBDA.2019.8725658</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> papers </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Microservices performance </tag>
+            
+            <tag> Kubemark </tag>
+            
+            <tag> Kubernet </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
