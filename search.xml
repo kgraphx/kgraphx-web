@@ -20,11 +20,11 @@
       
         <tags>
             
-            <tag> Chinese Segmentation </tag>
-            
             <tag> NLP </tag>
             
             <tag> Sentiment Analysis </tag>
+            
+            <tag> Chinese Segmentation </tag>
             
         </tags>
       
@@ -49,11 +49,38 @@
       
         <tags>
             
-            <tag> Zipf </tag>
-            
             <tag> Chinese Segmentation </tag>
             
+            <tag> Zipf </tag>
+            
             <tag> Feature extraction </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Showing History Trading Record of the Sample Companies with Graph</title>
+      <link href="/2021/03/26/graph-trade/"/>
+      <url>/2021/03/26/graph-trade/</url>
+      
+        <content type="html"><![CDATA[<h2 id="可视化展示"><a href="#可视化展示" class="headerlink" title="可视化展示"></a>可视化展示</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;d3-example&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">.node &#123;stroke: #fff; stroke-width: 1.5px;&#125;</span><br><span class="line">.link &#123;stroke: #999; stroke-opacity: .9;&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; async=&quot;&quot; data-requirecontext=&quot;_&quot; data-requiremodule=&quot;d3&quot; src=&quot;https://d3js.org/d3.v3.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">require.config(&#123;paths:</span><br><span class="line">    &#123;d3: &quot;https://d3js.org/d3.v3.min&quot;&#125;&#125;);</span><br><span class="line">require([&quot;d3&quot;], function(d3) &#123;</span><br><span class="line">  // The code in this block is executed when the</span><br><span class="line">  // d3.js library has been loaded.</span><br><span class="line"></span><br><span class="line">  // First, we specify the size of the canvas</span><br><span class="line">  // containing the visualization (size of the</span><br><span class="line">  // &lt;div&gt; element).</span><br><span class="line">  var width = 900, height = 600;</span><br><span class="line"></span><br><span class="line">  // We create a color scale.</span><br><span class="line">  var color = d3.scale.category10();</span><br><span class="line"></span><br><span class="line">  // We create a force-directed dynamic graph layout.</span><br><span class="line">  var force = d3.layout.force()</span><br><span class="line">    .charge(-120)</span><br><span class="line">    .linkDistance(30)</span><br><span class="line">    .size([width, height]);</span><br><span class="line"></span><br><span class="line">  // In the &lt;div&gt; element, we create a &lt;svg&gt; graphic</span><br><span class="line">  // that will contain our interactive visualization.</span><br><span class="line">  var svg = d3.select(&quot;#d3-example&quot;).select(&quot;svg&quot;)</span><br><span class="line">  if (svg.empty()) &#123;</span><br><span class="line">    svg = d3.select(&quot;#d3-example&quot;).append(&quot;svg&quot;)</span><br><span class="line">          .attr(&quot;width&quot;, width)</span><br><span class="line">          .attr(&quot;height&quot;, height);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  // We load the JSON file.</span><br><span class="line">  d3.json(&quot;https://raw.githubusercontent.com/HTCsteven/jsonfile/main/trans.json&quot;, function(error, graph) &#123;</span><br><span class="line"></span><br><span class="line">    force.nodes(graph.nodes)</span><br><span class="line">      .links(graph.links)</span><br><span class="line">      .start();</span><br><span class="line">    </span><br><span class="line">    // We create a &lt;line&gt; SVG element for each link</span><br><span class="line">    // in the graph.</span><br><span class="line">    var link = svg.selectAll(&quot;.link&quot;)</span><br><span class="line">      .data(graph.links)</span><br><span class="line">      .enter().append(&quot;line&quot;)</span><br><span class="line">      .attr(&quot;class&quot;, &quot;link&quot;);</span><br><span class="line">    </span><br><span class="line">    // We create a &lt;circle&gt; SVG element for each node</span><br><span class="line">    // in the graph, and we specify a few attributes.</span><br><span class="line">    var node = svg.selectAll(&quot;.node&quot;)</span><br><span class="line">      .data(graph.nodes)</span><br><span class="line">      .enter().append(&quot;circle&quot;)</span><br><span class="line">      .attr(&quot;class&quot;, &quot;node&quot;)</span><br><span class="line">      .attr(&quot;r&quot;, 5)  // radius</span><br><span class="line">      .style(&quot;fill&quot;, function(d) &#123;</span><br><span class="line">         // The node color depends on the club.</span><br><span class="line">         return color(d.size);</span><br><span class="line">      &#125;)</span><br><span class="line">      .call(force.drag);</span><br><span class="line">    </span><br><span class="line">    // The name of each node is the node number.</span><br><span class="line">    node.append(&quot;title&quot;)</span><br><span class="line">        .text(function(d) &#123; return d.name; &#125;);</span><br><span class="line">    </span><br><span class="line">    // We bind the positions of the SVG elements</span><br><span class="line">    // to the positions of the dynamic force-directed</span><br><span class="line">    // graph, at each time step.</span><br><span class="line">    force.on(&quot;tick&quot;, function() &#123;</span><br><span class="line">      link.attr(&quot;x1&quot;, function(d)&#123;return d.source.x&#125;)</span><br><span class="line">          .attr(&quot;y1&quot;, function(d)&#123;return d.source.y&#125;)</span><br><span class="line">          .attr(&quot;x2&quot;, function(d)&#123;return d.target.x&#125;)</span><br><span class="line">          .attr(&quot;y2&quot;, function(d)&#123;return d.target.y&#125;);</span><br><span class="line">    </span><br><span class="line">      node.attr(&quot;cx&quot;, function(d)&#123;return d.x&#125;)</span><br><span class="line">          .attr(&quot;cy&quot;, function(d)&#123;return d.y&#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> projects </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Kownledge Graph </tag>
+            
+            <tag> Trading Record </tag>
             
         </tags>
       
