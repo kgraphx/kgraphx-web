@@ -60,7 +60,7 @@ require(["d3"], function(d3) {
   }
 
   // We load the JSON file.
-  d3.json("https://raw.githubusercontent.com/HTCsteven/jsonfile/main/trans.json", function(error, graph) {
+  d3.json("https://raw.githubusercontent.com/kgraphx/dataset/master/json/trade_graph.json", function(error, graph) {
 
     force.nodes(graph.nodes)
       .links(graph.links)
