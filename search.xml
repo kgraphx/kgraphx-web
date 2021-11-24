@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Building Covid19 Q&amp;A System Demo with Haystack Framework</title>
+      <link href="/2021/11/18/haystack-covid/"/>
+      <url>/2021/11/18/haystack-covid/</url>
+      
+        <content type="html"><![CDATA[<p><img src="images/haystack_covid.png" alt="cover"></p><p><strong>Haystack Framework</strong><br>Haystack is an end-to-end framework that enables you to build powerful and production-ready pipelines for different search use cases. Whether you want to perform Question Answering or semantic document search, you can use the State-of-the-Art NLP models in Haystack to provide unique search experiences and allow your users to query in natural language. Haystack is built in a modular fashion so that you can combine the best technology from other open-source projects like Huggingface’s Transformers, Elasticsearch, or Milvus.<br>(<a href="https://github.com/deepset-ai/haystack">https://github.com/deepset-ai/haystack</a>)<br><strong>CORD-19: COVID-19 Open Research Dataset</strong><br>CORD-19 is a free resource of tens of thousands of scholarly articles about COVID-19, SARS-CoV-2, and related coronaviruses for use by the global research community.<br>(<a href="https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html">https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/historical_releases.html</a>)<br><strong>Ingesting CORD-19 into Elasticsearch</strong><br>(<a href="https://github.com/castorini/anserini/blob/master/docs/experiments-cord19-extras.md">https://github.com/castorini/anserini/blob/master/docs/experiments-cord19-extras.md</a>)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> projects </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> NLP </tag>
+            
+            <tag> Q&amp;A System </tag>
+            
+            <tag> Covid19 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>How Does Chinese Segmentation Strategy Effect on Sentiment Analysis of Short Text?</title>
       <link href="/2021/08/26/chinese-seg/"/>
       <url>/2021/08/26/chinese-seg/</url>
